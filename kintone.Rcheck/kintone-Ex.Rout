@@ -1,0 +1,540 @@
+
+R version 3.0.3 (2014-03-06) -- "Warm Puppy"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "kintone"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> base::assign(".ExTimings", "kintone-Ex.timings", pos = 'CheckExEnv')
+> base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
+> base::assign(".format_ptime",
++ function(x) {
++   if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
++   if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
++   options(OutDec = '.')
++   format(x[1L:3L], digits = 7L)
++ },
++ pos = 'CheckExEnv')
+> 
+> ### * </HEADER>
+> library('kintone')
+Loading required package: RCurl
+Loading required package: bitops
+Loading required package: rjson
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("Kintone")
+> ### * Kintone
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: Kintone
+> ### Title: initialize/declare kintone object for R
+> ### Aliases: Kintone kintone-class initialize,kintone-method
+> 
+> ### ** Examples
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("Kintone", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("deleteRecords")
+> ### * deleteRecords
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: deleteRecords
+> ### Title: delete several records
+> ### Aliases: deleteRecords
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Delete several records
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     app <- 113 # application ID
+>     ids <- list(1240, 1241) # record IDs (R-list)
+>     kintone@deleteRecords(app, ids)
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508420660"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("deleteRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("downloadFile")
+> ### * downloadFile
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: downloadFile
+> ### Title: download a file
+> ### Aliases: downloadFile
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Download a file
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     fileKey <- "87115c38-908e-40ea-b10b-fe8a26698b55" # file key
+>     kintone@downloadFile(fileKey)
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("downloadFile", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("getRecord")
+> ### * getRecord
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: getRecord
+> ### Title: single record retrieval
+> ### Aliases: getRecord
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Retrieve single record
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     app <- 7 # application ID
+>     id <- 7 # record ID
+>     kintone@getRecord(app, id)
+$message
+[1] "指定したアプリ（id: 7）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508420369"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> ################################################################
+> #
+> #  Retrieve single record from guest space
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object
+>     app <- 220 # application ID
+>     id <- 7 # record ID
+>     spaceId <- 2 # space ID
+>     kintone@getRecord(app, id, spaceId=spaceId)
+$message
+[1] "権限がありません。"
+
+$id
+[1] "1505999166-1508420568"
+
+$code
+[1] "CB_NO02"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getRecord", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("getRecords")
+> ### * getRecords
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: getRecords
+> ### Title: several records retrieval
+> ### Aliases: getRecords
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Retrieve several records
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object
+>     app <- 113 # application ID
+>     kintone@getRecords(app) # request with no options
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508419868"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+>     query <- ' createDay > "2014-02-28" and createDay < "2014-03-02" ' # query strings
+>     kintone@getRecords(app, query=query) # request with "query" option
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508419971"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+>     fields <- list("createDay", "lat", "lon") # fields list (R-list)
+>     kintone@getRecords(app, fields=fields) # request with "fields" option
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508419224"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+>     kintone@getRecords(app, query=query, fields=fields) # request with "query" and "fields" options
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508418799"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> ################################################################
+> #
+> #  Retrieve several records from guest space
+> #   (NOTE) allowed to set "query" and/or "fields" options
+> #
+> ################################################################
+> 
+> kintone1 <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object
+>     app <- 220 # application ID
+>     spaceId <- 2 # space ID
+>     kintone1@getRecords(app, spaceId=spaceId)
+$message
+[1] "権限がありません。"
+
+$id
+[1] "1505999166-1508418727"
+
+$code
+[1] "CB_NO02"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("registRecord")
+> ### * registRecord
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: registRecord
+> ### Title: regist a single record
+> ### Aliases: registRecord
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Regist a single record
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     app <- 113 # application ID
+>     record <- c(list("lat"=list("value"=31.7401)),  
++                 list("lon"=list("value"=130.7536))  
++                ) # record (kintone-like R-vector)
+>     kintone@registRecord(app, record)
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508418183"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("registRecord", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("registRecords")
+> ### * registRecords
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: registRecords
+> ### Title: regist several records
+> ### Aliases: registRecords
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Regist several records
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     app <- 113 # application ID
+>     records <- list(c(list("lat"=list("value"=31.7401)),  
++                       list("lon"=list("value"=130.7536))  
++                      ),  
++                     c(list("lat"=list("value"=51.7401)),  
++                       list("lon"=list("value"=150.7536))  
++                      )
++                    ) # records (kintone-like R-list)
+>     kintone@registRecords(app, records)
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508418921"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("registRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("updateRecord")
+> ### * updateRecord
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: updateRecord
+> ### Title: update a single record
+> ### Aliases: updateRecord
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Update a single record
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     app <- 113 # application ID
+>     id <- 1245 # record ID
+>     record <- c(list("lat"=list("value"=31.7401)),  
++                 list("lon"=list("value"=130.7536))
++                ) # record (kintone-like R-vector)
+>     kintone@updateRecord(app, id, record)
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508418079"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("updateRecord", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("updateRecords")
+> ### * updateRecords
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: updateRecords
+> ### Title: update several records
+> ### Aliases: updateRecords
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Update several records
+> #
+> ################################################################
+> 
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     app <- 113 # application ID
+>     records <- list(list("id"=1244,  
++                          "record"=c(list("lat"=list("value"=31.7401)),  
++                                     list("lon"=list("value"=130.7536))  
++                                    )  
++                         ),  
++                     list("id"=1245,  
++                          "record"=c(list("lat"=list("value"=51.7401)),  
++                                     list("lon"=list("value"=150.7536))
++                                    )  
++                         )  
++                   ) # records (kintone-like R-list)
+>     kintone@updateRecords(app, records)
+$message
+[1] "指定したアプリ（id: 113）が見つかりません。削除されている可能性があります。"
+
+$id
+[1] "1505999166-1508417642"
+
+$code
+[1] "GAIA_AP01"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("updateRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("uploadFile")
+> ### * uploadFile
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: uploadFile
+> ### Title: upload a file
+> ### Aliases: uploadFile
+> 
+> ### ** Examples
+> 
+> ################################################################
+> #
+> #  Upload a file
+> #
+> ################################################################
+> # build text file for upload example
+> xml <- getURL(url="http://76.79.48.112/data.xml")
+> write(xml,file="./kintone.xml")
+> #
+> # upload a file, "kintone.xml"
+> kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kintone object 
+>     fileName <- "./kintone.xml" # file name
+>     kintone@uploadFile(fileName)
+* Adding handle: conn: 0x1008e4000
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 14 (0x1008e4000) send_pipe: 1, recv_pipe: 0
+* About to connect() to hakata.cybozu.com port 443 (#14)
+*   Trying 210.128.234.200...
+* Connected to hakata.cybozu.com (210.128.234.200) port 443 (#14)
+* TLS 1.2 connection using TLS_RSA_WITH_RC4_128_SHA
+* Server certificate: *.cybozu.com
+* Server certificate: Starfield Secure Certification Authority
+* Server certificate: Starfield Class 2 Certification Authority
+> POST /k/v1/file.json HTTP/1.1
+Host: hakata.cybozu.com
+Accept: */*
+X-Cybozu-Authorization: ci1raW50b25lOnIta2ludG9uZQ==
+Authorization: basic 
+verbose: TRUE
+Content-Length: 1259
+Expect: 100-continue
+Content-Type: multipart/form-data; boundary=----------------------------a75ced42579e
+
+< HTTP/1.1 100 Continue
+< HTTP/1.1 100 Continue
+< Set-Cookie: __ctc=210.203.213.100.1394355955569191; path=/; expires=Wed, 06-Mar-24 09:05:55 GMT; domain=.cybozu.com
+< HTTP/1.1 200 OK
+< Date: Sun, 09 Mar 2014 09:05:53 GMT
+* Server Apache is not blacklisted
+< Server: Apache
+< Strict-Transport-Security: max-age=315360000
+< X-Content-Type-Options: nosniff
+< Cache-Control: no-cache, no-store, must-revalidate
+< X-Frame-Options: SAMEORIGIN
+< Content-Type: application/json;charset=UTF-8
+< Set-Cookie: JSESSIONID=168799D8C699240C6B4C097710666139; Path=/; Secure; HttpOnly
+< Set-Cookie: CB_OPENAUTH=Y2kxcmFXNTBiMjVsOjpsb2dpbjoxMzk0MzU2NTUz%3A7f526917b9bdfc8d6cbe1506dde3a26adcb038460783b7f702056021d46703b6; Path=/; Secure; HttpOnly
+< Vary: Accept-Encoding,User-Agent
+< X-UA-Compatible: IE=Edge,chrome=IE7
+< Transfer-Encoding: chunked
+< 
+* Connection #14 to host hakata.cybozu.com left intact
+$fileKey
+[1] "86d77fe0-71c0-491d-bd70-820579d38f28"
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("uploadFile", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  1.191 0.034 4.699 0 0 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

@@ -1,0 +1,10 @@
+exportPattern("^[[:alpha:]]+")
+exportMethods(
+    "initialize" 
+)
+exportClasses(
+    "kintone" 
+)
+import(RCurl)
+import(methods)
+import(rjson)

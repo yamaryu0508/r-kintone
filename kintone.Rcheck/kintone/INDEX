@@ -1,0 +1,10 @@
+Kintone                 initialize/declare kintone object for R
+deleteRecords           delete several records
+downloadFile            download a file
+getRecord               single record retrieval
+getRecords              several records retrieval
+registRecord            regist a single record
+registRecords           regist several records
+updateRecord            update a single record
+updateRecords           update several records
+uploadFile              upload a file

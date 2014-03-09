@@ -1,0 +1,10 @@
+Package: kintone
+Type: Package
+Title: kintone REST client package for R
+Version: 0.1
+Date: 2014-03-09
+Author: Ryu Yamashita
+Maintainer: Ryu Yamashita <yamaryu0508@gmail.com>
+Description: This package allows one to compose kintone REST API requests and convenient functions to convert kintone-JSON/R-Objects in R scriptings.
+License: BSD 2-clause License + file LICENSE
+Depends: methods, RCurl, rjson

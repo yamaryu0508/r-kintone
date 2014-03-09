@@ -1,0 +1,12 @@
+deleteRecords	deleteRecords
+downloadFile	downloadFile
+getRecord	getRecord
+getRecords	getRecords
+initialize,kintone-method	Kintone
+Kintone	Kintone
+kintone-class	Kintone
+registRecord	registRecord
+registRecords	registRecords
+updateRecord	updateRecord
+updateRecords	updateRecords
+uploadFile	uploadFile

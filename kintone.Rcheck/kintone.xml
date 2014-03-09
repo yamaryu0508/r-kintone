@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<server host="GBB15" address="76.79.48.112" name="GBB15" product-version="1.5.4" mac-address="00:04:A3:7F:9F:83" datetime="2014-03-09 03:05:55" 
+        company="Geist" company-url="http://www.geistglobal.com" support-email="support@geistglobal.com" support-phone="800.432.3219 / +1.402.474.3400 "
+        console-id="bb015" tempunit="C" poe-option="0" driver="OwAAV100">
+<devices>
+<device id="670004A37F9F83C3" name="GBB15" type="BB-TH" available="1" index="0">
+<field key="Temp" value="19.70" niceName="Temperature"/>
+<field key="Humidity" value="17" niceName="Humidity"/>
+<field key="Dewpt" value="-6.07" niceName="Dewpoint"/>
+</device>
+</devices>
+
+<alarms>
+<alarm alarm-num="0" device-id="670004A37F9F83C3" field="Temp" limtype="High" limit="40.00" email="     " trap="  " actions="" status="UNTRIPPED"/>
+<alarm alarm-num="1" device-id="670004A37F9F83C3" field="Temp" limtype="Low" limit="-40.00" email="     " trap="  " actions="" status="UNTRIPPED"/>
+</alarms>
+
+<cameras>
+</cameras>
+
+</server>
+
