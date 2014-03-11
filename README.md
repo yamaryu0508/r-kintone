@@ -14,9 +14,9 @@ BSD_2_clause
 * RCurl
 * rjson
 
-## ~~CRAN package~~ (wainting for accept)
-* ~~manual (PDF)~~
-* ~~information (HTML)~~
+## CRAN package
+* manual ([PDF](http://cran.r-project.org/web/packages/kintone/kintone.pdf))
+* information ([HTML](http://cran.r-project.org/web/packages/kintone/index.html))
 
 ## Installation
 
@@ -24,7 +24,7 @@ BSD_2_clause
 
 or
 
-~~install.packages("kintone") in your R console~~ (waiting for accept)
+`install.packages("kintone") in your R console`
 
 ## Fundamental usage
 
