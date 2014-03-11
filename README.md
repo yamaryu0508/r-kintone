@@ -24,7 +24,7 @@ BSD_2_clause
 
 or
 
-`install.packages("kintone") in your R console`
+`install.packages("kintone")` in your R console
 
 ## Fundamental usage
 
