@@ -6,9 +6,9 @@
 library(RCurl)
 library(rjson)
 url <- "http://api.koubachi.com/v2/user/smart_devices/"
-macAddress <- "00066671ed9d"
-appKey <- "KLAB0T805RRKISOU1AX347HE"
-userCredentials <- "TkZKMSyLDEpPmSNIpqE_"
+macAddress <- "your MAC address"
+appKey <- "your app-key"
+userCredentials <- "your user-credentials"
 url <- paste(url, macAddress, sep="")
 url <- paste(url, appKey, sep=".json?app_key=")
 url <- paste(url, userCredentials, sep="&user_credentials=")
