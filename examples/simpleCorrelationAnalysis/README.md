@@ -7,7 +7,6 @@ The lower triangular matrix represents scatters among parameters. The upper tria
 ## Dependence packages
 * kintone
 * RCurl
-* XML
 
 ## Result
 ![R](RImage.jpg)
