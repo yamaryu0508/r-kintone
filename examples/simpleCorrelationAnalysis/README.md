@@ -4,6 +4,8 @@ This is an example of plotted correlation matrix of PV parameters.
 
 The lower triangular matrix represents scatters among parameters. The upper triangular matrix represents correlation values(lower side) and efficiency values of power conversion(upper side). The diagonal represents hisgrams of AC output distribution.
 
+![PV system](pvImage.png)
+
 ## Dependence packages
 * kintone
 * RCurl
