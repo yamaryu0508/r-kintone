@@ -4,15 +4,7 @@
 * using session charset: UTF-8
 * checking for file ‘kintone/DESCRIPTION’ ... OK
 * checking extension type ... Package
-* this is package ‘kintone’ version ‘0.1’
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: ‘Ryu Yamashita <yamaryu0508@gmail.com>’
-New submission
-Components with restrictions and base license permitting such:
-  BSD 2-clause License + file LICENSE
-File ‘LICENSE’:
-  YEAR: 2014
-  COPYRIGHT HOLDER: Ryu Yamashita
+* this is package ‘kintone’ version ‘0.1.1’
 * checking package namespace information ... OK
 * checking package dependencies ... OK
 * checking if this is a source package ... OK
@@ -43,7 +35,6 @@ File ‘LICENSE’:
 * checking R code for possible problems ... OK
 * checking Rd files ... OK
 * checking Rd metadata ... OK
-* checking Rd line widths ... OK
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
@@ -52,4 +43,3 @@ File ‘LICENSE’:
 * checking for unstated dependencies in examples ... OK
 * checking examples ... OK
 * checking PDF version of manual ... OK
-NOTE: There was 1 note.

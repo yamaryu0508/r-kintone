@@ -2,12 +2,21 @@
     params <- .getParams(.Object, "file")
     #print(params)
     url <- paste(params[["url"]], sep="")
+    #check login
+    contents <- paste('{}')
+    checkJson <- getURL(url, customrequest="GET", postfields=contents, httpheader=params[["headers"]], ssl.verifypeer = FALSE)
+    check <- fromJSON(checkJson)
+    if(check$code=="CB_AU01"){
+        message <- list(message=check$message)
+        return(message)
+    }
+    #upload file
     responseJson<-postForm(url,
          file = fileUpload(filename = fileName,
                     contentType = "multipart/form-data"),
                     .opts = list(httpheader = params[["headers"]], 
 ssl.verifypeer = FALSE, verbose = TRUE)
-     )
+    )
     response <- fromJSON(responseJson)
     return(response)
 }

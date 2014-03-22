@@ -1,18 +1,6 @@
 pkgname <- "kintone"
 source(file.path(R.home("share"), "R", "examples-header.R"))
 options(warn = 1)
-base::assign(".ExTimings", "kintone-Ex.timings", pos = 'CheckExEnv')
-base::cat("name\tuser\tsystem\telapsed\n", file=base::get(".ExTimings", pos = 'CheckExEnv'))
-base::assign(".format_ptime",
-function(x) {
-  if(!is.na(x[4L])) x[1L] <- x[1L] + x[4L]
-  if(!is.na(x[5L])) x[2L] <- x[2L] + x[5L]
-  options(OutDec = '.')
-  format(x[1L:3L], digits = 7L)
-},
-pos = 'CheckExEnv')
-
-### * </HEADER>
 library('kintone')
 
 base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
@@ -22,7 +10,6 @@ nameEx("Kintone")
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: Kintone
 ### Title: initialize/declare kintone object for R
 ### Aliases: Kintone kintone-class initialize,kintone-method
@@ -33,15 +20,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("Kintone", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("deleteRecords")
 ### * deleteRecords
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: deleteRecords
 ### Title: delete several records
 ### Aliases: deleteRecords
@@ -62,15 +46,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("deleteRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("downloadFile")
 ### * downloadFile
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: downloadFile
 ### Title: download a file
 ### Aliases: downloadFile
@@ -90,15 +71,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("downloadFile", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("getRecord")
 ### * getRecord
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: getRecord
 ### Title: single record retrieval
 ### Aliases: getRecord
@@ -131,15 +109,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("getRecord", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("getRecords")
 ### * getRecords
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: getRecords
 ### Title: several records retrieval
 ### Aliases: getRecords
@@ -179,15 +154,12 @@ kintone1 <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kin
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("getRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("registRecord")
 ### * registRecord
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: registRecord
 ### Title: regist a single record
 ### Aliases: registRecord
@@ -210,15 +182,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("registRecord", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("registRecords")
 ### * registRecords
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: registRecords
 ### Title: regist several records
 ### Aliases: registRecords
@@ -245,15 +214,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("registRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("updateRecord")
 ### * updateRecord
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: updateRecord
 ### Title: update a single record
 ### Aliases: updateRecord
@@ -277,15 +243,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("updateRecord", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("updateRecords")
 ### * updateRecords
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: updateRecords
 ### Title: update several records
 ### Aliases: updateRecords
@@ -316,15 +279,12 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("updateRecords", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 cleanEx()
 nameEx("uploadFile")
 ### * uploadFile
 
 flush(stderr()); flush(stdout())
 
-base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 ### Name: uploadFile
 ### Title: upload a file
 ### Aliases: uploadFile
@@ -348,8 +308,6 @@ kintone <- Kintone("hakata.cybozu.com", "r-kintone", "r-kintone") # declare Kint
 
 
 
-base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
-base::cat("uploadFile", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
 ### * <FOOTER>
 ###
 options(digits = 7L)
