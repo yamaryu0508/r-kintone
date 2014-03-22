@@ -1,4 +1,4 @@
-# Temperature and humidity sensor(RSMicro)
+# Temperature and humidity sensor (RSMicro)
 
 This sensor product is provided by [GEIST](http://www.geistglobal.com/products/monitor/climate-monitors/rsmicro/ "GEIST").
 

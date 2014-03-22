@@ -1,4 +1,4 @@
-# WiFi plant sensor
+# WiFi plant sensor (Koubachi)
 
 This sensor product is provided by [Koubachi AG](http://www.koubachi.com/ "koubachi.com").
 
