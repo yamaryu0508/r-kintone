@@ -12,7 +12,7 @@ In this repository section, sample codes is provided for M2M using kintone.
 
 ![M2M2kintone](image/M2M2kintone.png)
 
-cf. ["FA data storage service"](http://www.megakiku.jp/fadss/ "FA data storage service") is a cloud-based M2M service provided by [Nishimu Electronics Industries Co.,Ltd.](http://www.nishimu.co.jp/ "Nishimu Electronics Industries Co.,Ltd.")
+cf. ["FA data storage service"](http://www.megakiku.jp/fadss/ "FA data storage service") is a cloud-based M2M service provided by [Nishimu Electronics Industries Co.,Ltd.](http://www.nishimu.co.jp/index-e.html "Nishimu Electronics Industries Co.,Ltd.")
 
 ## See also
 * M2M2H of Cybozu [ [Japanese](http://www.itmedia.co.jp/enterprise/articles/1401/23/news026.html) ]
