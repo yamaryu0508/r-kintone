@@ -1,4 +1,4 @@
-# kintone REST client package for R (unofficial)
+# kintone REST API client package for R (unofficial)
 
 This package allows one to compose kintone REST API requests and convenient functions to convert kintone-JSON/R-Objects in R scriptings.
 
@@ -149,6 +149,5 @@ You can set a `spaceId` option as follows.
 
 * kintone on cybozu.com [ [English](https://kintone.cybozu.com/us/ "English page") | [Japanese](https://kintone.cybozu.com/jp/ "Japanese page") ]
 * kintone developers [[English](http://developers.kintone.com/ "English page")]
-* cybozu.com developer documentation [[Japanese](https://developers.cybozu.com/ja/ "Japanese page")]
 * cybozu.com developer network [[Japanese](https://cybozudev.zendesk.com/hc/ja/ "Japanese page")]
 * Cybozu, inc. [ [English](https://kintone.cybozu.com/us/company.html "English page") | [Japanese](http://cybozu.co.jp/ "Japanese page") ]
