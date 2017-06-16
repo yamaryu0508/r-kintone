@@ -2,7 +2,7 @@
 
 This package allows one to compose kintone REST API requests and convenient functions to convert kintone-JSON/R-Objects in R scriptings.
 
-[kintone](https://kintone.cybozu.com/us/ "English page") is very useful and powerful cloud service provided by [Cybozu, inc.](https://kintone.cybozu.com/us/company.html "Cybozu, inc.")
+[kintone](https://www.kintone.com/ "English page") is very useful and powerful cloud service provided by [Cybozu, inc.](http://cybozu.co.jp/ "Cybozu, inc.")
 
 **(NOTICE)** This package has not yet been fully tested for bugs.  
 
@@ -147,7 +147,7 @@ You can set a `spaceId` option as follows.
     
 ## kintone official information
 
-* kintone on cybozu.com [ [English](https://kintone.cybozu.com/us/ "English page") | [Japanese](https://kintone.cybozu.com/jp/ "Japanese page") ]
-* kintone developers [[English](http://developers.kintone.com/ "English page")]
+* kintone on cybozu.com [ [English](https://www.kintone.com/ "English page") | [Japanese](https://kintone.cybozu.com/jp/ "Japanese page") ]
+* kintone developers [[English](https://developer.kintone.io "English page")]
 * cybozu.com developer network [[Japanese](https://cybozudev.zendesk.com/hc/ja/ "Japanese page")]
-* Cybozu, inc. [ [English](https://kintone.cybozu.com/us/company.html "English page") | [Japanese](http://cybozu.co.jp/ "Japanese page") ]
+* Cybozu, inc. [ [English](https://www.kintone.com/build-applications-platform/ "English page") | [Japanese](http://cybozu.co.jp/ "Japanese page") ]
